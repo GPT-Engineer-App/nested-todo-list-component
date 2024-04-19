@@ -77,7 +77,10 @@ const Index = () => {
     };
 
     setEditId(id);
-    setEditText(findTodoText(todos));
+    const textToEdit = findTodoText(todos);
+    if (textToEdit !== null) {
+      setEditText(textToEdit);
+    }
   };
 
   const handleSaveEdit = () => {
